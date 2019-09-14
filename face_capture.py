@@ -24,10 +24,10 @@ while(True):
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     # when a face is found, crop it and save it
     for (x,y,w,h) in faces:
-	# crop down to just the face
-	cropped_face = frame[y:y+h, x:x+w].copy()
-	# save image copy
-	print("Face detected")
+        # crop down to just the face
+        cropped_face = frame[y:y+h, x:x+w].copy()
+        # save image copy
+        print("Face detected")
         rc, jpg = cv2.imencode('.png', cropped_face)
         msg = jpg.tobytes()
         client.publish("Capture", payload=msg, qos=2)
