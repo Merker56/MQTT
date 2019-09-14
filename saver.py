@@ -9,7 +9,7 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    print(msg.topic+" "+str(msg.payload))
+    print(msg.topic+" message received!")
     #Gets the image and saves it to disk
     f=open("/data/" + time.time() + ".png")
     f.write(msg.payload)
