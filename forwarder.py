@@ -10,7 +10,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
     #Receives the message and forwards it to cloud
-    client.publish("Forward/#",payload=msg.payload,qos=2,retain=False)
+    client.publish("Forward",payload=msg.payload,qos=2,retain=False)
     print("Published message to Forward!")
     
 def on_disconnect(client, userdata):
