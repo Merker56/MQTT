@@ -1,3 +1,4 @@
+import numpy as np
 import cv2
 import datetime
 import paho.mqtt.client as mqtt
