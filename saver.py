@@ -13,7 +13,7 @@ def on_message(client, userdata, msg):
     print(msg.topic+" message received!")
     #Gets the image and saves it to disk
     i = i + 1
-    f=open(f"data/face_{i}.png", "wb")
+    f=open(f"data/face_{i}.png", "w+")
     print("File Opened!")
     f.write(msg.payload)
     print("Content written")
