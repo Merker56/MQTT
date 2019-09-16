@@ -31,6 +31,6 @@ while(True):
         print("Face detected")
         rc,jpg = cv2.imencode('.png', cropped_face)
         msg = jpg.tobytes()
-        client.publish("Capture", payload=msg, qos=2)
+        client.publish("Capture", payload=msg)
         print("Published to Capture")
 
