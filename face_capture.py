@@ -11,7 +11,7 @@ client.on_connect = on_connect
 client.connect("174.130.55.179", 1883, 60)
 
 #Search for faces
-face_cascade = cv.CascadeClassifier('/usr/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('/usr/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml')
 # 1 should correspond to /dev/video1 , your USB camera. The 0 is reserved for the TX2 onboard camera
 cap = cv2.VideoCapture(1)
 
