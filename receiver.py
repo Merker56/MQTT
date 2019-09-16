@@ -10,7 +10,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
     #Gets the image and passes to Saver
-    client.publish("Receive",payload=msg.payload,qos=2,retain=False)
+    client.publish("Receive",payload=msg.payload)
 
 client = mqtt.Client()
 client.on_connect = on_connect
