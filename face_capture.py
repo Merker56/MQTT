@@ -32,4 +32,5 @@ while(True):
         rc, jpg = cv2.imencode('.png', cropped_face)
         msg = jpg.tobytes()
         client.publish("Capture", payload=msg, qos=2)
+        print("Published to Capture")
 
