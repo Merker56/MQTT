@@ -18,3 +18,4 @@ RUN dpkg -i *.deb
 RUN apt install -y libcanberra-gtk-module libcanberra-gtk3-module libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev 
 
 RUN pip3 install paho-mqtt
+RUN pip3 install numpy
