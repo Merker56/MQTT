@@ -14,6 +14,7 @@ def on_message(client, userdata, msg):
     f=open("/data/" + time.time() + ".png")
     f.write(msg.payload)
     f.close()
+    print("File saved!")
 
 client = mqtt.Client()
 client.on_connect = on_connect
