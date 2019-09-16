@@ -2,7 +2,7 @@ FROM ubuntu
 
 ARG URL=http://169.44.201.108:7002/jetpacks/4.2
 
-RUN apt-get update && apt install -y git pkg-config wget build-essential cmake unzip xhost curl python python3-pip
+RUN apt-get update && apt install -y git pkg-config wget build-essential cmake unzip curl python python3-pip
 
 WORKDIR /tmp
 # RUN rm *.deb
