@@ -1,6 +1,6 @@
 import paho.mqtt.client as mqtt
 import os
-import datetime
+import time
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -11,7 +11,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+" message received!")
     #Gets the image and saves it to disk
-    f=open("/data/" + datetime.time() + ".png", "w")
+    f=open("/data/" + time.time() + ".png", "w")
     print("File Opened!")
     f.write(msg.payload)
     print("Content written")
