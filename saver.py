@@ -25,7 +25,7 @@ def on_message(client, userdata, msg):
     print("Payload received!")
     img = cv2.imdecode(z, cv2.IMREAD_GRAYSCALE)
     print("Image decoded.")
-    f=open(f"face_{i}.png", "w+")
+    f=open("face_{}.png".format(i), "w+")
     #print("File Opened!")
     f.write(p)
     #print("Content written")
