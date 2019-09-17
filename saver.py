@@ -21,7 +21,7 @@ def on_message(client, userdata, msg):
     print("Incremented count")
     f=open(f"face_{i}.png", "w+")
     print("File Opened!")
-    f = write(msg.payload)
+    f.write(msg.payload)
     print("Content written")
     f.close()
     print("File saved!")
