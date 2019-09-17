@@ -24,7 +24,7 @@ def on_message(client, userdata, msg):
     z = np.fromstring(msg.payload, np.uint8)
     print("Payload received!")
     print(z)
-    img = cv2.imdecode(z, cv2.IMREAD_GRASCALE)
+    img = cv2.imdecode(z, cv2.IMREAD_GRAYSCALE)
     print("Image decoded.")
     print(img)
     #f=open(f"face_{i}.png", "w+")
