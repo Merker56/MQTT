@@ -26,11 +26,11 @@ def on_message(client, userdata, msg):
     img = cv2.imdecode(z, cv2.IMREAD_GRAYSCALE)
     print("Image decoded.")
     f=open("face_{}.png".format(i), "w+")
-    #print("File Opened!")
-    f.write(p)
-    #print("Content written")
+    print("File Opened!")
+    f.write(img)
+    print("Content written")
     f.close()
-    #print("File saved!")
+    print("File saved!")
 
 client = mqtt.Client()
 client.on_connect = on_connect
