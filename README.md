@@ -22,7 +22,10 @@ python forwarder.py
 ```
 
 #### Capture docker container
-The capture docker container is a ubuntu container with opencv installed. It uses the Dockerfile found in this directory.
+The capture docker container is a ubuntu container with opencv installed. It uses the Dockerfile found in this directory. Once that has been build we simply run the container and clone the code repository onto the container and execute the `face_capture.py` file.
+```
+docker run --name capture --network hw03 --device=/dev/video1 -ti capture
+```
 
 #### Receiver docker container
 This docker container is on the virtual server and will receive messages off of the 'forwarder' container. This is done via the `receiver.py` script.
