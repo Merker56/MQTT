@@ -12,10 +12,13 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+" message received!")
     #Gets the image and saves it to disk
+    os.chdir(/data)
+    print("Directory changed")
     i = i + 1
-    f=open(f"data/face_{i}.png", "w+")
+    print("Incremented count")
+    f=open(f"face_{i}.png", "w+")
     print("File Opened!")
-    f.write(msg.payload)
+    f = write(msg.payload)
     print("Content written")
     f.close()
     print("File saved!")
