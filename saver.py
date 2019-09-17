@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqtt
 import os
 import time
+import cv2
 
 global i
 i = 0
