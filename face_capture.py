@@ -29,7 +29,7 @@ while(True):
         cropped_face = frame[y:y+h, x:x+w].copy()
         # save image copy
         print("Face detected")
-        rc,jpg = cv2.imencode('.png', cropped_face)
+        rc,jpg = cv2.imencode('.jpg', cropped_face)
         msg = jpg.tobytes()
         client.publish("Capture", payload=msg)
         print("Published to Capture")
