@@ -21,12 +21,11 @@ def on_message(client, userdata, msg):
     global i
     i = i + 1
     print("Incremented count")
-    img = np.array(msg.payload)
+    z = np.fromstring(msg.payload. np.uint8)
     print("Payload received!")
-    cv2.imwrite(f"face_{i}.png", msg.payload)
-    print("File saved!")
-    #p = cv2.imdecode(img)
-    #print("Image decoded.")
+    img = cv2.imdecode(z, cv2.IMREAD_GRASCALE)
+    print("Image decoded.")
+    print(img)
     #f=open(f"face_{i}.png", "w+")
     #print("File Opened!")
     #f.write(p)
