@@ -23,6 +23,7 @@ def on_message(client, userdata, msg):
     print("Incremented count")
     z = np.fromstring(msg.payload, np.uint8)
     print("Payload received!")
+    print(z)
     img = cv2.imdecode(z, cv2.IMREAD_GRASCALE)
     print("Image decoded.")
     print(img)
